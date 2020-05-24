@@ -1,0 +1,6 @@
+{
+    "app": {
+        "inertMode": false,
+        "_inertModeDesc": "if app in test mode, no command will be executed"
+    }
+}

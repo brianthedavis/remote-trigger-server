@@ -1,0 +1,93 @@
+{
+    "launchCommands":
+    [
+        {
+            "url": "start_snapclient",
+            "command": "systemctl start snapclient",
+            "action": "Starting the snapclient process",
+            "desc": ""
+        },
+        {
+            "url": "stop_snapclient",
+            "command": "systemctl stop snapclient",
+            "action": "Stopping the snapclient process",
+            "desc": ""
+        },
+        {
+            "url": "toggle_snapclient",
+            "command": "/home/pi/scripts/snapclient_toggle.sh",
+            "action": "Toggle the snapclient process",
+            "desc": ""
+        },
+
+        {
+            "url": "toggle_music",
+            "command": "/home/pi/scripts/automation/garage/toggle_playing_snapcast_fav.py",
+            "action": "Toggle playing music either from mpc or snapclient",
+            "desc": ""
+        },
+        {
+            "url": "start_music",
+            "command": "/home/pi/scripts/automation/garage/toggle_playing_snapcast_fav.py --set on",
+            "action": "Start music",
+            "desc": ""
+        },
+        {
+            "url": "stop_music",
+            "command": "/home/pi/scripts/automation/garage/toggle_playing_snapcast_fav.py --set off",
+            "action": "Stop music",
+            "desc": ""
+        },
+
+        {
+            "url": "toggle_music_patio",
+            "command": "/home/pi/scripts/automation/garage/toggle_playing_snapcast_fav.py --amp",
+            "action": "Toggle playing music either from mpc or snapclient",
+            "desc": ""
+        },
+        {
+            "url": "start_music_patio",
+            "command": "/home/pi/scripts/automation/garage/toggle_playing_snapcast_fav.py --set on --amp",
+            "action": "Start music",
+            "desc": ""
+        },
+        {
+            "url": "stop_music_patio",
+            "command": "/home/pi/scripts/automation/garage/toggle_playing_snapcast_fav.py --set off --amp",
+            "action": "Stop music",
+            "desc": ""
+        },
+
+        {
+            "url": "amp_on",
+            "command": "/home/pi/scripts/automation/garage/patio_amp_power.sh on",
+            "action": "Turn the patio amp On",
+            "desc": ""
+        },
+        {
+            "url": "amp_off",
+            "command": "/home/pi/scripts/automation/garage/patio_amp_power.sh off",
+            "action": "Turn the patio amp off",
+            "desc": ""
+        },
+        {   
+            "url": "amp_vol_up",
+            "command": "/home/pi/scripts/automation/garage/patio_amp_volume.sh up",
+            "action": "Turn the patio amp up",
+            "desc": ""
+        },
+        {
+            "url": "amp_vol_down",
+            "command": "/home/pi/scripts/automation/garage/patio_amp_volume.sh down",
+            "action": "Turn the patio amp down",
+            "desc": ""
+        },
+
+        {
+            "url": "test",
+            "command": "echo this is a test",
+            "action": "a test message",
+            "desc": ""
+        }
+    ]
+}

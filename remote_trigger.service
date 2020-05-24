@@ -1,0 +1,22 @@
+# Copy to /etc/systemd/system
+#sudo cp monitor_buttons.service /etc/systemd/system
+#sudo systemctl daemon-reload
+#sudo systemctl enable monitor_buttons.service
+#sudo systemctl start monitor_buttons.service
+
+[Unit]
+Description=Activate commands as root via http
+
+[Service]
+Environment=NODE_PORT=3001
+
+Type=simple
+ExecStart=/usr/local/bin/node /home/pi/scripts/remote_trigger_server/app.js
+Restart=on-failure
+# Capture log output to a file
+StandardOutput=append:/var/log/remote_trigger_server.log
+StandardError=inherit
+
+[Install]
+WantedBy=multi-user.target
+
