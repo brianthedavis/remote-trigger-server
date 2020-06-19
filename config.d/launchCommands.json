@@ -19,7 +19,12 @@
             "action": "Toggle the snapclient process",
             "desc": ""
         },
-
+        {
+            "url": "is_snapclient_running",
+            "command": "/home/pi/scripts/automation/is_snapclient_running.sh",
+            "action": "Query whether Snapclient is running or not",
+            "desc": ""
+        },
         {
             "url": "toggle_music",
             "command": "/home/pi/scripts/automation/garage/toggle_playing_snapcast_fav.py",
