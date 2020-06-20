@@ -1,4 +1,13 @@
 {
+    "statusCommands":[
+        {
+            "url": "is_snapclient_running",
+            "command": "/home/pi/scripts/automation/is_snapclient_running.sh",
+            "action": "Query whether Snapclient is running or not",
+            "desc": ""
+        }
+    ],
+    
     "launchCommands":
     [
         {
@@ -17,12 +26,6 @@
             "url": "toggle_snapclient",
             "command": "/home/pi/scripts/snapclient_toggle.sh",
             "action": "Toggle the snapclient process",
-            "desc": ""
-        },
-        {
-            "url": "is_snapclient_running",
-            "command": "/home/pi/scripts/automation/is_snapclient_running.sh",
-            "action": "Query whether Snapclient is running or not",
             "desc": ""
         },
         {

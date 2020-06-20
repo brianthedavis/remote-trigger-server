@@ -32,6 +32,7 @@ app.use(bodyParser.json());
 
 app.get('/', (req, res) => res.send('Hello World!'));
 app.use('/cmd', require('./cmd.js'));
+app.use('/status', require('./status.js'));
 
 
 app.listen(port, () => console.log(`Remote Trigger Service running at http://localhost:${port}`));
