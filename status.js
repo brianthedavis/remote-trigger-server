@@ -1,7 +1,6 @@
 // status routes that are accessed via GET instead of POST
 
 const express = require('express');
-const childProcess = require('child_process');
 const config = require('./config.js');
 const lib = require('./lib.js');
 
@@ -12,7 +11,7 @@ function buildRoute(commandObject) {
     // For a JSON object with a command and action, build a route in the server
     console.log(commandObject);
     if (commandObject.command && commandObject.url) {
-        console.log(`defined endpoint: ${commandObject.url}`);
+        console.log(`defined status endpoint: ${commandObject.url}`);
         app.get(`/${commandObject.url}`, (req, res) => {
             console.log(`fetching ${commandObject.url}`);
             // const postBody = req.body;

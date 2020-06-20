@@ -1,4 +1,5 @@
 
+const childProcess = require('child_process');
 
 /**
  * Executes a shell command and return it as a Promise.
