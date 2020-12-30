@@ -96,6 +96,12 @@
             "command": "echo this is a test",
             "action": "a test message",
             "desc": ""
+        },
+        {
+            "url": "booltest",
+            "command": "echo true",
+            "action": "a test boolean",
+            "desc": ""
         }
     ]
 }

@@ -17,11 +17,19 @@ function buildRoute(commandObject) {
             // const postBody = req.body;
             (async () => {
                 let response = await lib.execShellCommand(commandObject.command);
+                
+                let responseParsed;
+                // Try to parse any boolean or integer in the response...
+                try {
+                    responseParsed = JSON.parse(response);
+                } catch (e) {
+                    responseParsed = response;
+                }
 
                 // Don't send the specific command back to the user...just for security reasons
                 const responseObj = {
                     action: commandObject.action,
-                    response: JSON.parse(response),
+                    response: responseParsed,
                 };
                 res.json(responseObj);
             })(); // end async()
