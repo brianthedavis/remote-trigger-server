@@ -36,7 +36,7 @@ function buildRoute(commandObject) {
                 // Don't send the specific command back to the user...just for security reasons
                 const responseObj = {
                     action: commandObject.action,
-                    response,
+                    response: JSON.parse(response),
                 };
                 res.json(responseObj);
             })(); // end async()
